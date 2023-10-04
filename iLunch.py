@@ -36,7 +36,7 @@ def send_email(sender_email, recipient_emails, subject, message):
         msg['From'] = sender_email
         msg['To'] = recipient_email
         server = smtplib.SMTP('OMITTED SERVER DNS')
-        server.login(#omitted creds)
+        server.login(username, password) #these hopefully are stored in a yaml or json in a secure location
         server.sendmail(sender_email, recipient_email, msg.as_string())
         server.quit()
 
